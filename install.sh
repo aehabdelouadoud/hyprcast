@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# Install arnn-modules
+# Check if models exist; if not, download them
+model_dir="$HOME/.local/share/arnndn-models"
+
+# Check if the directory exists
+if [[ ! -d "$model_dir" ]]; then
+  echo "Downloading ARNNDN models..."
+  git clone https://github.com/richardpl/arnndn-models.git "$model_dir"
+fi
+
 # Install the hyprcast script to /usr/bin
 echo "Installing hyprcast script..."
 if sudo cp ./bin/hyprcast /usr/bin; then
@@ -31,4 +41,3 @@ else
 fi
 
 echo "Installation completed successfully!"
-

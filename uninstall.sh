@@ -22,4 +22,3 @@ else
 fi
 
 echo "Uninstallation completed!"
-

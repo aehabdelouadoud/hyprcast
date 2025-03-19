@@ -6,14 +6,14 @@ pkgdesc="A Wayland-compatible script for recording video and audio with optional
 arch=('x86_64')
 url="https://aehabdelouadoud.github.io"
 license=('MIT')
-depends=('wf-recorder' 'ffmpeg' 'ffplay' 'wayland' 'weston' 'pulseaudio')  # Add Wayland-related dependencies
+depends=('wf-recorder' 'ffmpeg' 'wayland' 'weston' 'pulseaudio')  # Add Wayland-related dependencies
 makedepends=('git')
 source=(
   "git+https://github.com/aehabdelouadoud/hyprcast.git"
   "man/hyprcast.1"
   "bin/hyprcast"
 )
-sha256sums=('SKIP') # You may use a hash here if you're not fetching directly from a git repository
+sha256sums=('9be67afec8601efd0787c2509a150157a112e6b7a7f3a34f5fa0ffaa05e206c2') # You may use a hash here if you're not fetching directly from a git repository
 
 package() {
   # Install the hyprcast script to /usr/bin
